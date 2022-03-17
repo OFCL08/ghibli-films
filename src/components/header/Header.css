@@ -1,0 +1,61 @@
+.Header-container, .Header-container-block {
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  height: 7vh;
+  width: 100%;
+}
+
+.Header-container-block, .Header-container:hover {
+  background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25));
+}
+
+.Header-container-title {
+  align-self: center;
+  color: #fff;
+  display: flex;
+  font: bold 30px sans-serif;
+}
+
+.Search-button {
+  background-color: transparent;
+  margin: 0;
+  border: none;
+  padding: 0;
+}
+
+.Search-container {
+  align-self: center;
+  display: flex;
+  left: 3%;
+  position: absolute;
+}
+
+.Search-icon {
+  height: 20px;
+  max-height: 20px;
+  max-width: 20px;
+  width: 20px;
+}
+
+.Search-input {
+  height: 20px;
+  margin: 0 0 0 10px;
+  width: 20vw;
+}
+
+.Search-result {
+  background-color: #fff;
+  display: flex;
+  left: 30px;
+  position: absolute;
+  top: 30px;
+  width: 20vw;
+}
+
+.Search-item {
+  background-color: transparent;
+  margin: 0;
+  border: none;
+  padding: 5px;
+}
