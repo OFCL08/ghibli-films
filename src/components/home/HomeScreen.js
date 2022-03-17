@@ -1,31 +1,27 @@
-import React, { useEffect } from "react";
-import { useSelector, useDispatch } from 'react-redux'
+import React from "react";
+import { useNavigate } from 'react-router-dom';
+import { useSelector } from 'react-redux'
 import { Loading } from '../../common/Loading';
-import { useGetAllFilmsQuery } from './api/HomeApi';
-import { loadFilms } from '../home/HomeSlice';
 import { Header } from "../header/Header";
 import './HomeScreen.css';
 
 const HomeScreen = () => {
-  const dispatch = useDispatch();
-  const { data, isLoading } = useGetAllFilmsQuery();
+  const navigate = useNavigate();
   const store = useSelector((state) => state.home);
   const { filmData, filteredFilms } = store;
 
-  useEffect(() => {
-    if (!isLoading && data.length && !filmData.length) {
-      dispatch(loadFilms(data));
-    }
-  }, [data, dispatch, filmData, isLoading]);
-
   function renderFilms() {
-    if (isLoading) {
+    if (!filmData.length) {
       return <div className="Flex Loading-container"><Loading /></div>;
     }
 
     return (
       <div className="Flex Film-container">
-        {filteredFilms.map((film) => <img alt="Poster" key={film.id} src={film.image} />)}
+        {filteredFilms.map((film) => (
+          <button className="Flex Film-poster-button" key={film.id} onClick={() => navigate(`/details/${film.id}`)}>
+            <img alt="Poster" className="Film-poster" key={film.id} src={film.image} />
+          </button>
+        ))}
       </div>
     );
   }

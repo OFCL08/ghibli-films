@@ -16,16 +16,26 @@
   align-items: center;
   flex-wrap: wrap;
   height: 100%;
-  padding: 0 0 0 15%;
+  padding: 0 0 5% 6%;
   width: 100%;
 }
 
-.Film-container > img {
-  min-height: 15%;
-  max-height: 20%;
-  max-width: 20%;
+.Film-poster-button {
+  min-height: 5%;
+  max-height: 15%;
+  max-width: 15%;
   margin: 5px;
-  min-width: 15%;
+  min-width: 5%;
+  background-color: grey;
+  margin: 0 5px;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.Film-poster {
+  height: 100%;
+  width: 100%;
 }
 
 .Loading-container {
