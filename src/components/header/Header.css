@@ -59,3 +59,20 @@
   border: none;
   padding: 5px;
 }
+
+/* Mobile */
+@media (max-width: 568px) {
+  .Header-container, .Header-container-block {
+    justify-content: space-around;
+  }
+
+  .Header-container-title {
+    font: bold 15px sans-serif;
+    position: absolute;
+    right: 5%;
+  }
+
+  .Search-input { 
+    width: 40vw;
+  }
+}
