@@ -1,0 +1,36 @@
+.Home-container {
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+  height: 100%;
+  width: 100%;
+}
+
+.Home-container > span {
+  color: #fff;
+  font: 22px sans-serif;
+  margin: 2% 0;
+}
+
+.Film-container {
+  align-items: center;
+  flex-wrap: wrap;
+  height: 100%;
+  padding: 0 0 0 15%;
+  width: 100%;
+}
+
+.Film-container > img {
+  min-height: 15%;
+  max-height: 20%;
+  max-width: 20%;
+  margin: 5px;
+  min-width: 15%;
+}
+
+.Loading-container {
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+}

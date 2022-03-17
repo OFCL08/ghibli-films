@@ -1,0 +1,75 @@
+.Loading-dots {
+  position: relative;
+  left: -9999px;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #fff;
+  box-shadow: 9999px 0 0 -5px #fff;
+  animation: LoadingDots 1.5s infinite linear;
+  animation-delay: .25s;
+}
+
+.Loading-dots::before, .Loading-dots::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #fff;
+}
+
+.Loading-dots::before {
+  box-shadow: 9984px 0 0 -5px #fff;
+  animation: LoadingDotsBefore 1.5s infinite linear;
+  animation-delay: 0s;
+}
+
+.Loading-dots::after {
+  box-shadow: 10014px 0 0 -5px #fff;
+  animation: LoadingDotsAfter 1.5s infinite linear;
+  animation-delay: .5s;
+}
+
+@keyframes LoadingDotsBefore {
+  0% {
+    box-shadow: 9984px 0 0 -5px #fff;
+  }
+  30% {
+    box-shadow: 9984px 0 0 2px #fff;
+  }
+  60%,
+  100% {
+    box-shadow: 9984px 0 0 -5px #fff;
+  }
+}
+
+@keyframes LoadingDots {
+  0% {
+    box-shadow: 9999px 0 0 -5px #fff;
+  }
+  30% {
+    box-shadow: 9999px 0 0 2px #fff;
+  }
+  60%,
+  100% {
+    box-shadow: 9999px 0 0 -5px #fff;
+  }
+}
+
+@keyframes LoadingDotsAfter {
+  0% {
+    box-shadow: 10014px 0 0 -5px #fff;
+  }
+  30% {
+    box-shadow: 10014px 0 0 2px #fff;
+  }
+  60%,
+  100% {
+    box-shadow: 10014px 0 0 -5px #fff;
+  }
+}
